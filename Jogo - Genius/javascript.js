@@ -1,28 +1,30 @@
 var inicio = false
-
     var coresdarodada = [];
     var coresdarodada_jogador = [];
 
 
 function inicio_jogo() {
+    
+    document.getElementById("start").style.display ="none"
     inicio = true;
     var vezjogador = false;
     var rodada_atual = 0;
     var cliques = 0;
     var rodadaa = 0;
     var i = 0
+    document.getElementById("num_rodada").innerText = (rodada_atual + 1)
     rodada()
 
     // exibir cores anteriores
 
 
         function cores_historico(){
-
+        
             
             var piscar = setInterval(function(){
             
                 rodadaa++
-            
+                
 
                 if (coresdarodada[i] == 0) {
                     setTimeout(function () {
@@ -153,9 +155,11 @@ function inicio_jogo() {
                     cliques = 0
                     rodadaa= 0
                     i = 0
+                    document.getElementById("num_rodada").innerText = (rodada_atual + 1)
                     cores_historico()
                 } else {
-                    alert("Você errou, burro!")
+                    alert("Você errou, tente na próxima!")
+                    document.getElementById("start").style.display ="block"
                     coresdarodada = []
                     coresdarodada_jogador = []
                     vezjogador = false
@@ -187,14 +191,16 @@ function inicio_jogo() {
                 }
 
                 if (comparacao(coresdarodada, coresdarodada_jogador) == true) {
-                    alert("deu certo")
+                    alert("Você acertou!")
                     coresdarodada_jogador = []
                     cliques = 0
                     rodadaa=0
                     i = 0
+                    document.getElementById("num_rodada").innerText = (rodada_atual + 1)
                     cores_historico()
                 } else {
-                    alert("Você errou, burro!")
+                    alert("Você errou, tente na próxima!")
+                    document.getElementById("start").style.display ="block"
                     coresdarodada = []
                     coresdarodada_jogador = []
                     vezjogador = false
@@ -224,14 +230,16 @@ function inicio_jogo() {
                 }
 
                 if (comparacao(coresdarodada, coresdarodada_jogador) == true) {
-                    alert("deu certo")
+                    alert("Você acertou!")
                     coresdarodada_jogador = []
                     cliques = 0
                     rodadaa=0
                     i = 0
+                    document.getElementById("num_rodada").innerText = (rodada_atual + 1)
                    cores_historico()
                 } else {
-                    alert("Você errou, burro!")
+                    alert("Você errou, tente na próxima")
+                    document.getElementById("start").style.display ="block"
                     coresdarodada = []
                     coresdarodada_jogador = []
                     vezjogador = false
@@ -261,14 +269,16 @@ function inicio_jogo() {
                 }
 
                 if (comparacao(coresdarodada, coresdarodada_jogador) == true) {
-                    alert("deu certo")
+                    alert("Você acertou")
                     coresdarodada_jogador = []
                     cliques = 0
                     rodadaa=0
                     i = 0
+                    document.getElementById("num_rodada").innerText = (rodada_atual + 1)
                     cores_historico()
                 } else {
-                    alert("Você errou, burro!")
+                    alert("Você errou, tente na próxima")
+                    document.getElementById("start").style.display ="block"
                     coresdarodada = []
                     coresdarodada_jogador = []
                     vezjogador = false
@@ -280,12 +290,6 @@ function inicio_jogo() {
             }else{
 
             }
-
-
-
-
-
-
 
         } else {
        
