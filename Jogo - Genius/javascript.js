@@ -153,17 +153,20 @@ function inicio_jogo() {
     document.getElementById("box1").addEventListener("click", function () {
 
         if (vezjogador == true) {
+            const som1 = document.getElementById("som1")
+            som1.play()            
             cliques++
             coresdarodada_jogador.push(0);
 
             if(cliques == rodada_atual){
+
                 //parte que compara
                 var comparacao = (coresdarodada, coresdarodada_jogador) => {
                     return coresdarodada.length === coresdarodada_jogador.length && coresdarodada.every((item, index) => item === coresdarodada_jogador[index])
                 }
 
                 if (comparacao(coresdarodada, coresdarodada_jogador) == true) {
-                    alert("deu certo")
+                    alert("Você Acertou!")
                     coresdarodada_jogador = []
                     cliques = 0
                     rodadaa= 0
@@ -192,12 +195,15 @@ function inicio_jogo() {
     document.getElementById("box2").addEventListener("click", function () {
 
         if (vezjogador == true) {
+            const som2 = document.getElementById("som2")
+            som2.play()   
             cliques++
             coresdarodada_jogador.push(1);
 
 
 
             if(cliques == rodada_atual){
+            
                 //parte que compara
                 var comparacao = (coresdarodada, coresdarodada_jogador) => {
                     return coresdarodada.length === coresdarodada_jogador.length && coresdarodada.every((item, index) => item === coresdarodada_jogador[index])
@@ -232,11 +238,14 @@ function inicio_jogo() {
     document.getElementById("box3").addEventListener("click", function () {
 
         if (vezjogador == true) {
+            const som3 = document.getElementById("som3")
+            som3.play() 
             cliques++
             coresdarodada_jogador.push(2);
 
 
             if(cliques == rodada_atual){
+               
                 //parte que compara
                 var comparacao = (coresdarodada, coresdarodada_jogador) => {
                     return coresdarodada.length === coresdarodada_jogador.length && coresdarodada.every((item, index) => item === coresdarodada_jogador[index])
@@ -271,11 +280,14 @@ function inicio_jogo() {
     document.getElementById("box4").addEventListener("click", function () {
 
         if (vezjogador == true && inicio == true) {
+            const som4 = document.getElementById("som4")
+            som4.play() 
             cliques++
             coresdarodada_jogador.push(3);
 
 
             if(cliques == rodada_atual){
+               
                 //parte que compara
                 var comparacao = (coresdarodada, coresdarodada_jogador) => {
                     return coresdarodada.length === coresdarodada_jogador.length && coresdarodada.every((item, index) => item === coresdarodada_jogador[index])
