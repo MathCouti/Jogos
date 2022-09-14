@@ -29,38 +29,46 @@ function inicio_jogo() {
                 if (coresdarodada[i] == 0) {
                     setTimeout(function () {
                         document.getElementById("box1").classList.add("cor1-1")
-                    }, 700);
+                    }, 300);
+
                     setTimeout(function () {
                         document.getElementById("box1").classList.remove("cor1-1")
-                    }, 1200);
-
+                    }, 1000);
+                    const som1 = document.getElementById("som1")
+                    som1.play()
 
                 } else if (coresdarodada[i] == 1) {
                     setTimeout(function () {
                         document.getElementById("box2").classList.add("cor2-1")
-                    }, 700);
+                    }, 300);
+
                     setTimeout(function () {
                         document.getElementById("box2").classList.remove("cor2-1")
-                    }, 1200);
-
+                    }, 1000);
+                    const som2 = document.getElementById("som2")
+                    som2.play()
 
                 } else if (coresdarodada[i] == 2) {
                     setTimeout(function () {
                         document.getElementById("box3").classList.add("cor3-1")
-                    }, 700);
+                    }, 300);
+
                     setTimeout(function () {
                         document.getElementById("box3").classList.remove("cor3-1")
-                    }, 1200);
-
+                    }, 1000);
+                    const som3 = document.getElementById("som3")
+                    som3.play()
 
                 } else if (coresdarodada[i] == 3) {
                     setTimeout(function () {
                         document.getElementById("box4").classList.add("cor4-1")
-                    }, 700);
+                    }, 300);
+
                     setTimeout(function () {
                         document.getElementById("box4").classList.remove("cor4-1")
-                    }, 1200);
-
+                    }, 1000);
+                    const som4 = document.getElementById("som4")
+                    som4.play()
                 }
 
                 if(rodadaa == rodada_atual){
@@ -88,11 +96,12 @@ function inicio_jogo() {
             if (sorteio == 0) {
                 setTimeout(function () {
                     document.getElementById("box1").classList.add("cor1-1")
-                }, 700);
+                }, 300);
                 setTimeout(function () {
                     document.getElementById("box1").classList.remove("cor1-1")
-                }, 1200);
-
+                }, 1000);
+                const som1 = document.getElementById("som1")
+                som1.play()
 
                 coresdarodada.push(0)
 
@@ -100,11 +109,12 @@ function inicio_jogo() {
             } else if (sorteio == 1) {
                 setTimeout(function () {
                     document.getElementById("box2").classList.add("cor2-1")
-                }, 700);
+                }, 300);
                 setTimeout(function () {
                     document.getElementById("box2").classList.remove("cor2-1")
-                }, 1200);
-
+                }, 1000);
+                const som2 = document.getElementById("som2")
+                som2.play()
                 coresdarodada.push(1)
 
 
@@ -112,21 +122,24 @@ function inicio_jogo() {
             } else if (sorteio == 2) {
                 setTimeout(function () {
                     document.getElementById("box3").classList.add("cor3-1")
-                }, 700);
+                }, 300);
                 setTimeout(function () {
                     document.getElementById("box3").classList.remove("cor3-1")
-                }, 1200);
-
+                }, 1000);
+                const som3 = document.getElementById("som3")
+                som3.play()
                 coresdarodada.push(2)
 
 
             } else if (sorteio == 3) {
                 setTimeout(function () {
                     document.getElementById("box4").classList.add("cor4-1")
-                }, 700);
+                }, 300);
                 setTimeout(function () {
                     document.getElementById("box4").classList.remove("cor4-1")
-                }, 1200);
+                }, 1000);
+                const som4 = document.getElementById("som4")
+                som4.play()                
                 coresdarodada.push(3)
 
             }

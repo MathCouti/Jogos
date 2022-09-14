@@ -33,7 +33,7 @@ body{
     background-color: rgb(160, 160, 0);
     border-radius: 0 0 100% 0;
 }
-
+/*
 .cor1:hover{
     background-color: rgb(216, 0, 0);
 }
@@ -47,7 +47,7 @@ body{
     background-color: rgb(230, 230, 0); 
 }
 
-
+*/
 
 
 .cor1-1{
@@ -106,4 +106,65 @@ body{
     background-color: rgb(221, 252, 175);
     font-size: 4em;
     padding: 10px;
+}
+
+@media (max-width: 500px){
+    .container{
+        margin: 1px auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 204px;
+        height: 100px;
+        
+    }
+    .blockcolor{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        cursor: pointer;
+    } 
+
+
+    .container-3{
+        width: 100%;
+        height: 100%;
+        max-width: 150px;
+        margin: 50px auto;
+        
+        border: 1px solid black;
+        
+    }
+    .block-1, .block-2{
+        text-align: center;
+    }
+    .block-1{
+        background-color: black;
+        color: white;
+        font-size: 1em;
+        padding: 5px;
+    }
+    .block-2{
+        background-color: rgb(221, 252, 175);
+        font-size: 1em;
+        padding: 10px;
+    }
+
+
+
+}
+@media (min-width: 501px){
+    .cor1:hover{
+        background-color: rgb(216, 0, 0);
+    }
+    .cor2:hover{
+        background-color: rgb(0, 161, 0);
+    }
+    .cor3:hover{
+        background-color: rgb(44, 171, 255);    
+    }
+    .cor4:hover{
+        background-color: rgb(230, 230, 0); 
+    }
+    
 }
